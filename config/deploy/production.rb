@@ -60,4 +60,10 @@
 #     # password: "please use keys"
 #   }
 
-server '127.0.0.1', user: 'yjiang', roles: %w{app db web}
+server '192.168.0.137', user: 'deploy', roles: %w{app db web}, my_property: :my_value
+
+set :ssh_options, {
+    keys: %w(~/.ssh/id_rsa),
+    forward_agent: true,
+    auth_methods: %w(publickey)
+  }
