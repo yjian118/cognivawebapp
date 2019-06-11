@@ -1,0 +1,23 @@
+<% doc_presenter = index_presenter(document) %>
+<%# default partial to display solr document fields in catalog index view -%>
+<dl class="document-metadata dl-invert row">
+<% doc_presenter.fields_to_render.each do |field_name, field| -%>
+  <%#"URL" should be renamed as the show_field name in order to let it works%>  
+    <% unless field_name == "url_fulltext_ssm" %>
+      <dt class="blacklight-<%= field_name.parameterize %> col-md-3">
+        <%= render_document_show_field_label document, field: field_name %>
+      </dt>
+      <dd class="blacklight-<%= field_name.parameterize %> col-md-9">
+        <%= doc_presenter.field_value field %>
+      </dd>
+    <% else %>
+      <dt class="blacklight-<%= field_name.parameterize %> col-md-3">
+        <%= render_document_show_field_label document, field: field_name %>
+      </dt>
+      <dd class="blacklight-<%= field_name.parameterize %> col-md-9">
+        <% field_value = doc_presenter.field_value field%>
+        <%= link_to field_value, field_value %>
+      </dd>
+    <% end %>    
+  <% end -%>
+</dl>

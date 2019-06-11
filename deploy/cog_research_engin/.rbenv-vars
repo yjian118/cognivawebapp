@@ -1,0 +1,4 @@
+# For MySQL
+DATABASE_URL=mysql2://deploy:123@localhost/cog_research_engin
+
+
