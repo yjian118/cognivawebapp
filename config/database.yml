@@ -22,9 +22,6 @@ test:
 
 production:
   adapter: postgresql
-  host: localhost
+  url: <%= ENV['DATABASE_URL'] %>
   encoding: unicode
-  database: cognivawebapp
   pool: 5
-  username: deploy
-  password: 123
