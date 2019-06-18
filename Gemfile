@@ -67,6 +67,10 @@ group :development, :test do
   gem 'solr_wrapper', '>= 0.3'
 end
 
+group :production do
+  gem 'pg'
+end
+
 gem 'rsolr', '>= 1.0', '< 3'
 gem 'bootstrap', '~> 4.0'
 gem 'popper_js'
@@ -80,4 +84,3 @@ gem 'capistrano-rails', '~> 1.4'
 gem 'capistrano-bundler'
 gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 gem 'capistrano-passenger'
-gem 'pg', '~> 0.18.4'
