@@ -31,10 +31,10 @@ install_plugin Capistrano::SCM::Git
  require "capistrano/bundler"
 # require "capistrano/rails/assets"
 # require "capistrano/rails/migrations"
-require "capistrano/passenger"
-require "capistrano/rails"
-require "capistrano/rbenv"
-#require "capistrano/puma"
+# require "capistrano/passenger"
+require 'capistrano/rails'
+require 'capistrano/rbenv'
+require 'capistrano/puma'
 
 set :rbenv_type, :user
 set :rbenv_ruby, '2.5.3'
