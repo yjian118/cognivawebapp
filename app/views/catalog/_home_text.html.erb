@@ -4,7 +4,7 @@
   <p class="lead">A customized search engine</p>
 
   <p>
-    <%= link_to "Book", {q: "format:book"}, class: 'btn btn-primary' %>
-    <%= link_to "eBook", {q: "format:eBook"}, class: 'btn btn-primary' %>
+    <%= link_to "structured", {q: "document_genre_ssim:structured"}, class: 'btn btn-primary' %>
+    <%= link_to "unstructured", {q: "document_genre_ssim:unstructured"}, class: 'btn btn-primary' %>
   </p>
 </div>
