@@ -81,7 +81,7 @@ class CatalogController < ApplicationController
 
     config.add_facet_field 'document_genre_tsim', label: 'Document Genre'
     config.add_facet_field 'qApplication_ssim', label: 'Application'
-    config.add_facet_field 'qDate_ssim', label: 'Create Time', :date => { :format => :short }
+    config.add_facet_field 'qDate_ssim', label: 'Create Time', limit: 30
     #:date => true
     #label: 'Time Period', :query => {
     #  :years_5 => { label: 'within 6 month', fq: "qDate_ssim:[#{Time.zone.now.month - 6 } TO *]" },
